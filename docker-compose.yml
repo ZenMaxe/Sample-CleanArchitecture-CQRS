@@ -1,6 +1,12 @@
-﻿services:
-  sample-cleanarchitecture-cqrs.api:
+﻿version: '3.8'
+
+services:
+  api:
     image: sample-cleanarchitecture-cqrs.api
     build:
       context: .
-      dockerfile: Sample-CleanArchitecture-CQRS.Api/Dockerfile
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"  
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production  

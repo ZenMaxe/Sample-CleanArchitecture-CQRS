@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		docker-compose.yml = docker-compose.yml
+		DockerFile = DockerFile
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample-CleanArchitecture-CQRS.Shared", "src\Sample-CleanArchitecture-CQRS.Shared\Sample-CleanArchitecture-CQRS.Shared.csproj", "{4442EBDF-43E7-4B52-9EA6-E7C77CC6E0C0}"

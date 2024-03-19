@@ -1,0 +1,6 @@
+﻿services:
+  sample-cleanarchitecture-cqrs.api:
+    image: sample-cleanarchitecture-cqrs.api
+    build:
+      context: .
+      dockerfile: Sample-CleanArchitecture-CQRS.Api/Dockerfile

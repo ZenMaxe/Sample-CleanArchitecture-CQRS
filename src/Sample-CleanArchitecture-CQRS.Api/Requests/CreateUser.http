@@ -1,0 +1,14 @@
+@rootUrl=https://localhost:7010
+
+POST {{rootUrl}}/users/register
+Content-Type: application/json
+
+{
+    "username": "ZenMaxe",
+    "email": "test@gmail.com",
+    "password": "55555eeeeAbbbb@",
+    "firstname": "Hossein",
+    "lastname": "Sanjabian"
+}
+
+

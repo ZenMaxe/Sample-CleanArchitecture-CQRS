@@ -1,0 +1,13 @@
+@Sample-CleanArchitecture-CQRS.Api_HostAddress = https://localhost:7010
+@Sample_CleanArchitecture_CQRS.Api_HostAddress = http://localhost:5242
+
+
+
+POST {{Sample-CleanArchitecture-CQRS.Api_HostAddress}}/auth/login
+Content-Type: application/json
+
+{
+  //LoginDto
+}
+
+###

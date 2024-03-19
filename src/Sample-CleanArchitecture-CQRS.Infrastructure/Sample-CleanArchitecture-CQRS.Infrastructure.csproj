@@ -1,0 +1,91 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <RootNamespace>Sample_CleanArchitecture_CQRS.Infrastructure</RootNamespace>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Sample-CleanArchitecture-CQRS.Application\Sample-CleanArchitecture-CQRS.Application.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Mapster" Version="7.4.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.3" />
+      <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.3" />
+      <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.2" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.3" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Analyzers" Version="8.0.3" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.3">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.3" />
+      <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="7.4.0" />
+      <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.4.0" />
+      <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.4.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="Resources\Results\JwtErrors.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>JwtErrors.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Services\RoleService\RoleServiceErrors.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>RoleServiceErrors.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Services\RoleService\RoleServiceResults.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>RoleServiceResults.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Services\UserService\UserServiceErrors.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>UserServiceErrors.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Services\UserService\UserServiceResults.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>UserServiceResults.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Services\AuthenticationService\AuthenticationServiceErrors.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>AuthenticationServiceErrors.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Resources\Results\JwtErrors.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>JwtErrors.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Services\RoleService\RoleServiceErrors.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>RoleServiceErrors.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Services\RoleService\RoleServiceResults.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>RoleServiceResults.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Services\UserService\UserServiceErrors.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>UserServiceErrors.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Services\UserService\UserServiceResults.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>UserServiceResults.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Services\AuthenticationService\AuthenticationServiceErrors.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>AuthenticationServiceErrors.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+</Project>

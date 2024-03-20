@@ -1,6 +1,6 @@
 @rootUrl=https://localhost:7010
 
-POST {{rootUrl}}/users/register
+POST {{rootUrl}}/api/v1/users/register
 Content-Type: application/json
 
 {

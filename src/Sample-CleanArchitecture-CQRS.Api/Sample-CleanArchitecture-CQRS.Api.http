@@ -3,11 +3,3 @@
 
 
 
-POST {{Sample-CleanArchitecture-CQRS.Api_HostAddress}}/auth/login
-Content-Type: application/json
-
-{
-  //LoginDto
-}
-
-###

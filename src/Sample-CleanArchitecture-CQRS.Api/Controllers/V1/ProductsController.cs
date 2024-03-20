@@ -1,10 +1,11 @@
-﻿using MapsterMapper;
+﻿using Asp.Versioning;
+
+using MapsterMapper;
 
 using MediatR;
 
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-
 using Sample_CleanArchitecture_CQRS.Application.Common.Models.Results;
 using Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Commands.Create;
 using Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Commands.Delete;
@@ -14,10 +15,11 @@ using Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Queries.Details;
 using Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Queries.GetAll;
 
 
-namespace Sample_CleanArchitecture_CQRS.Api.Controllers;
+namespace Sample_CleanArchitecture_CQRS.Api.Controllers.V1;
 
 [ApiController]
-[Route("products")]
+[ApiVersion(1)]
+[Route("api/v{v:apiVersion}/products")]
 [Authorize]
 public class ProductsController : ControllerBase
 {

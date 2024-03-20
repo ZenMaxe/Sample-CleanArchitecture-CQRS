@@ -1,17 +1,19 @@
-﻿using MapsterMapper;
+﻿using Asp.Versioning;
+
+using MapsterMapper;
 using MediatR;
 
 using Microsoft.AspNetCore.Mvc;
-
 using Sample_CleanArchitecture_CQRS.Application.Common.Models.Results;
 using Sample_CleanArchitecture_CQRS.Application.CQRS.Authentication.Commands.Login;
 using Sample_CleanArchitecture_CQRS.Application.CQRS.Authentication.Dtos;
 using Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Common;
 
-namespace Sample_CleanArchitecture_CQRS.Api.Controllers;
+namespace Sample_CleanArchitecture_CQRS.Api.Controllers.V1;
 
 [ApiController]
-[Route("auth")]
+[ApiVersion(1)]
+[Route("api/v{v:apiVersion}/auth")]
 public class AuthenticationsController : ControllerBase
 {
     private readonly ISender _sender;

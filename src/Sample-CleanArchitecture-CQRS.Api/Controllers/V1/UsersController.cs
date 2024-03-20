@@ -1,20 +1,22 @@
-﻿using MapsterMapper;
+﻿using Asp.Versioning;
+
+using MapsterMapper;
 
 using MediatR;
 
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-
 using Sample_CleanArchitecture_CQRS.Application.Common.Models.Results;
 using Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Common;
 using Sample_CleanArchitecture_CQRS.Application.CQRS.Users.Commands.Create;
 using Sample_CleanArchitecture_CQRS.Application.CQRS.Users.Dtos;
 
-namespace Sample_CleanArchitecture_CQRS.Api.Controllers;
+namespace Sample_CleanArchitecture_CQRS.Api.Controllers.V1;
 
 
 [ApiController]
-[Route("users")]
+[ApiVersion(1)]
+[Route("api/v{v:apiVersion}/users")]
 public class UsersController : ControllerBase
 {
     private readonly IMapper _mapper;

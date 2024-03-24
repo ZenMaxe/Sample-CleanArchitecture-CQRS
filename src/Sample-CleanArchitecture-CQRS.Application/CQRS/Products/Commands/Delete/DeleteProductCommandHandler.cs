@@ -16,7 +16,7 @@ using Sample_CleanArchitecture_CQRS.Domain.Entities.Products;
 namespace Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Commands.Delete;
 
 
-public class DeleteProductCommandHandler : IRequestHandler<DeleteProductCommand, ApiResult<string>>
+public sealed class DeleteProductCommandHandler : IRequestHandler<DeleteProductCommand, ApiResult<string>>
 {
     private readonly IUnitOfWork _unitOfWork;
     private readonly IProductRepository _productRepository;
@@ -36,7 +36,7 @@ public class DeleteProductCommandHandler : IRequestHandler<DeleteProductCommand,
             return ApiResult<string>.Failed(ProductsErrors.ProductNotFind);
         }
 
-        
+
 
         await _unitOfWork.BeginTransaction();
 

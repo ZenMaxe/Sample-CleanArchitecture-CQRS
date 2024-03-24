@@ -14,7 +14,7 @@ using Sample_CleanArchitecture_CQRS.Domain.Entities.Products;
 
 namespace Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Queries.GetAll;
 
-public class GetAllProductsQueryHandler : IRequestHandler<GetAllProductsQuery, ApiResult<List<ProductListDto>>>
+public sealed class GetAllProductsQueryHandler : IRequestHandler<GetAllProductsQuery, ApiResult<List<ProductListDto>>>
 {
 
     private readonly IMapper _mapper;

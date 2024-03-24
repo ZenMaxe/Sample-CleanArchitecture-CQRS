@@ -12,4 +12,4 @@ using Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Common;
 namespace Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Queries.GetAll;
 
 
-public record GetAllProductsQuery: IRequest<ApiResult<List<ProductListDto>>>;
+public sealed record GetAllProductsQuery: IRequest<ApiResult<List<ProductListDto>>>;

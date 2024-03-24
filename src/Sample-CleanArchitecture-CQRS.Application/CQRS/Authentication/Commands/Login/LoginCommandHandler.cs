@@ -13,7 +13,7 @@ using Sample_CleanArchitecture_CQRS.Application.CQRS.Authentication.Dtos;
 namespace Sample_CleanArchitecture_CQRS.Application.CQRS.Authentication.Commands.Login;
 
 
-public class LoginCommandHandler : IRequestHandler<LoginCommand, ApiResult<TokenDto>>
+public sealed class LoginCommandHandler : IRequestHandler<LoginCommand, ApiResult<TokenDto>>
 {
     private readonly IAuthenticationService _authenticationService;
 

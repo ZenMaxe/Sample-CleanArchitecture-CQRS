@@ -15,7 +15,7 @@ using Sample_CleanArchitecture_CQRS.Application.Common.Models.Results;
 using Sample_CleanArchitecture_CQRS.Application.CQRS.Users.Dtos;
 
 namespace Sample_CleanArchitecture_CQRS.Application.CQRS.Users.Commands.Create;
-public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, ApiResult<UserDto>>
+public sealed class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, ApiResult<UserDto>>
 {
     private readonly IUserService _userService;
     private readonly IMapper _mapper;

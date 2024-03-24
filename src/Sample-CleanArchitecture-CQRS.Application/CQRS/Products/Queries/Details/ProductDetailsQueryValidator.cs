@@ -10,7 +10,7 @@ using Sample_CleanArchitecture_CQRS.Application.Resources.Products;
 using Sample_CleanArchitecture_CQRS.Domain.Common.Resources.Products;
 
 namespace Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Queries.Details;
-public class ProductDetailsQueryValidator : AbstractValidator<ProductDetailsQuery>
+public sealed class ProductDetailsQueryValidator : AbstractValidator<ProductDetailsQuery>
 {
     public ProductDetailsQueryValidator()
     {

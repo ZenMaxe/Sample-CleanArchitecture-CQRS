@@ -12,7 +12,7 @@ using Sample_CleanArchitecture_CQRS.Application.Common.Models.Results;
 using Sample_CleanArchitecture_CQRS.Application.CQRS.Users.Dtos;
 
 namespace Sample_CleanArchitecture_CQRS.Application.CQRS.Users.Commands.Create;
-public record CreateUserCommand(
+public sealed record CreateUserCommand(
     string UserName,
     string Email,
     string Password,
@@ -21,7 +21,7 @@ public record CreateUserCommand(
     string? LastName) : IRequest<ApiResult<UserDto>>, IMapFrom<CreateUserDto>;
 
 
-public record CreateUserDto(
+public sealed record CreateUserDto(
     string UserName,
     string Email,
     string Password,

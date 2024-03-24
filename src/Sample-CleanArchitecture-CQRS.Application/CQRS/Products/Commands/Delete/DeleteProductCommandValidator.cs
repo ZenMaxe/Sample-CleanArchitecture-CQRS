@@ -9,7 +9,7 @@ using FluentValidation;
 using Sample_CleanArchitecture_CQRS.Domain.Common.Resources.Products;
 
 namespace Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Commands.Delete;
-public class DeleteProductCommandValidator : AbstractValidator<DeleteProductCommand>
+public sealed class DeleteProductCommandValidator : AbstractValidator<DeleteProductCommand>
 {
     public DeleteProductCommandValidator()
     {

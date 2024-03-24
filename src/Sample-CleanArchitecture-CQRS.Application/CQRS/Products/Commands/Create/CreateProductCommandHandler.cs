@@ -18,7 +18,7 @@ using Sample_CleanArchitecture_CQRS.Domain.Entities.Products;
 
 namespace Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Commands.Create;
 
-public class CreateProductCommandHandler(IProductRepository productRepository,
+public sealed class CreateProductCommandHandler(IProductRepository productRepository,
     IMapper mapper,
     IUnitOfWork unitOfWork) : IRequestHandler<CreateProductCommand, ApiResult<ProductDetailsDto>>
 {

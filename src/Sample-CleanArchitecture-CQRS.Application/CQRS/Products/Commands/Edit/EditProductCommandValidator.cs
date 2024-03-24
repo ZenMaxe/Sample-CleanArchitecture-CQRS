@@ -11,7 +11,7 @@ using Sample_CleanArchitecture_CQRS.Domain.Common.Resources.Products;
 namespace Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Commands.Edit;
 
 
-public class EditProductCommandValidator : AbstractValidator<EditProductCommand>
+public sealed class EditProductCommandValidator : AbstractValidator<EditProductCommand>
 {
 
     public EditProductCommandValidator()

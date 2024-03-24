@@ -17,7 +17,7 @@ using Sample_CleanArchitecture_CQRS.Domain.Common.Interfaces;
 using Sample_CleanArchitecture_CQRS.Domain.Entities.Products;
 
 namespace Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Commands.Edit;
-public class EditProductCommandHandler : IRequestHandler<EditProductCommand, ApiResult<ProductDetailsDto>>
+public sealed class EditProductCommandHandler : IRequestHandler<EditProductCommand, ApiResult<ProductDetailsDto>>
 {
     private readonly IMapper _mapper;
     private readonly IProductRepository _productRepository;
@@ -50,7 +50,7 @@ public class EditProductCommandHandler : IRequestHandler<EditProductCommand, Api
             return ApiResult<ProductDetailsDto>.Failed(ProductsErrors.SomethingIsWrong);
         }
 
-        var dto = _mapper.Map<ProductDetailsDto>(product); 
+        var dto = _mapper.Map<ProductDetailsDto>(product);
         return ApiResult<ProductDetailsDto>.Success(dto);
     }
 }

@@ -10,7 +10,7 @@ using FluentValidation;
 using Sample_CleanArchitecture_CQRS.Domain.Common.Resources.Users;
 
 namespace Sample_CleanArchitecture_CQRS.Application.CQRS.Users.Commands.Create;
-public class CreateUserCommandValidator : AbstractValidator<CreateUserCommand>
+public sealed class CreateUserCommandValidator : AbstractValidator<CreateUserCommand>
 {
     private const string _phoneNumberRegex = @"^\+[1-9]\d{1,14}$";
     private static readonly string[] _sourceArray = new[] {"[A-Z]", "[a-z]", "[0-9]", "[^a-zA-Z0-9]" };

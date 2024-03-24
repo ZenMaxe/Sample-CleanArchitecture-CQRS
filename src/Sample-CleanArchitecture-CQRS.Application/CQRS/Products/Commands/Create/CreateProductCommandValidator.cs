@@ -9,7 +9,7 @@ using FluentValidation;
 using Sample_CleanArchitecture_CQRS.Domain.Common.Resources.Products;
 
 namespace Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Commands.Create;
-public class CreateProductCommandValidator : AbstractValidator<CreateProductCommand>
+public sealed class CreateProductCommandValidator : AbstractValidator<CreateProductCommand>
 {
     public CreateProductCommandValidator()
     {

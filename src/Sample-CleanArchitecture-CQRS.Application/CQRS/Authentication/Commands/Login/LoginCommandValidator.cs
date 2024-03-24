@@ -10,7 +10,8 @@ using FluentValidation;
 using Sample_CleanArchitecture_CQRS.Domain.Common.Resources.Users;
 
 namespace Sample_CleanArchitecture_CQRS.Application.CQRS.Authentication.Commands.Login;
-public class LoginCommandValidator : AbstractValidator<LoginCommand>
+
+public sealed class LoginCommandValidator : AbstractValidator<LoginCommand>
 {
     public LoginCommandValidator()
     {

@@ -14,6 +14,6 @@ using Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Common;
 namespace Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Commands.Delete;
 
 
-public record DeleteProductCommand(Guid ProductId) : IRequest<ApiResult<string>>, IMapFrom<DeleteProductDto>;
+public sealed record DeleteProductCommand(Guid ProductId) : IRequest<ApiResult<string>>, IMapFrom<DeleteProductDto>;
 
-public record DeleteProductDto(Guid ProductId);
+public sealed record DeleteProductDto(Guid ProductId);

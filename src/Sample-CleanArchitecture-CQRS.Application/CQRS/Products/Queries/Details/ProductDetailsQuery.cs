@@ -14,5 +14,5 @@ using Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Common;
 namespace Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Queries.Details;
 
 
-public record ProductDetailsQuery(
+public sealed record ProductDetailsQuery(
     Guid ProductId) : IRequest<ApiResult<ProductDetailsDto>>;

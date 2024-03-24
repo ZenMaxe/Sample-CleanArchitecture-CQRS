@@ -14,12 +14,12 @@ using Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Common;
 namespace Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Commands.Create;
 
 
-public record CreateProductCommand(
+public sealed record CreateProductCommand(
     string Name,
     decimal Price
  ) : IRequest<ApiResult<ProductDetailsDto>>, IMapFrom<CreateProductDto>;
 
-public record CreateProductDto(
+public sealed record CreateProductDto(
     string Name,
     decimal Price
  );

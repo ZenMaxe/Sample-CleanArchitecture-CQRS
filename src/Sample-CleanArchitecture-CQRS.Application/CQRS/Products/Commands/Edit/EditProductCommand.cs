@@ -14,12 +14,12 @@ using Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Common;
 namespace Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Commands.Edit;
 
 
-public record EditProductCommand(
+public sealed record EditProductCommand(
     Guid ProductId,
     string? Name,
     decimal? Price) : IRequest<ApiResult<ProductDetailsDto>>, IMapFrom<EditProductDto>;
 
-public record EditProductDto(
+public sealed record EditProductDto(
     string? Name,
     decimal? Price);
 

@@ -49,23 +49,22 @@ internal sealed class RequestValidationBehavior<TRequest, TResponse>
         {
             // TResponse is ApiResult in This Behavior
 
-            return createApiResult<TResponse>(errors);
+            return createApiResult(errors);
         }
 
         return await next();
     }
 
-    private static TResult createApiResult<TResult>(List<string> errors)
-        where TResult : IResult
+    private static TResponse createApiResult(List<string> errors)
     {
-        Type type = typeof(TResult).GetGenericArguments()[0];
+        Type type = typeof(TResponse).GetGenericArguments()[0];
         object data = typeof(ApiResult<>)
                             .GetGenericTypeDefinition()
                             .MakeGenericType(type)
                             .GetMethod(nameof(ApiResult<object>.Failed), [typeof(List<string>), typeof(int)])!
                             .Invoke(null, [errors, 400])!;
 
-        return (TResult) data;
+        return (TResponse) data;
 
     }
 }

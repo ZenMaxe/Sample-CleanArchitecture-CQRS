@@ -5,7 +5,6 @@ using MediatR;
 
 using Microsoft.AspNetCore.Mvc;
 using Sample_CleanArchitecture_CQRS.Application.Common.Models.Results;
-using Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Common;
 using Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Authentication.Commands.Login;
 using Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Authentication.Dtos;
 

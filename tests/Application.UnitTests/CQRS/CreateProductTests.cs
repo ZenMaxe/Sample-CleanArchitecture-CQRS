@@ -10,7 +10,7 @@ using MapsterMapper;
 
 using Moq;
 
-using Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Commands.Create;
+using Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Products.Commands.Create;
 using Sample_CleanArchitecture_CQRS.Infrastructure.Data;
 using Sample_CleanArchitecture_CQRS.Infrastructure.Repositories;
 

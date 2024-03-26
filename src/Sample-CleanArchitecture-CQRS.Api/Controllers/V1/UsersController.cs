@@ -7,7 +7,7 @@ using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Sample_CleanArchitecture_CQRS.Application.Common.Models.Results;
-using Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Common;
+using Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Products.Common;
 using Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Users.Commands.Create;
 using Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Users.Dtos;
 

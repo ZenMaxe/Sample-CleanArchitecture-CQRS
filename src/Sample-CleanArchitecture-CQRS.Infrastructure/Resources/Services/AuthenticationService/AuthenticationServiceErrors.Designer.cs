@@ -87,5 +87,14 @@ namespace Sample_CleanArchitecture_CQRS.Infrastructure.Resources.Services.Authen
                 return ResourceManager.GetString("AccountProblem", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wrong Username/Password.
+        /// </summary>
+        internal static string WrongUsernameOrPassword {
+            get {
+                return ResourceManager.GetString("WrongUsernameOrPassword", resourceCulture);
+            }
+        }
     }
 }

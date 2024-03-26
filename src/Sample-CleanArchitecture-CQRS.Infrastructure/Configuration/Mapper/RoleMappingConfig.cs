@@ -1,6 +1,5 @@
 ﻿using Mapster;
-
-using Sample_CleanArchitecture_CQRS.Application.CQRS.Role.Dtos;
+using Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Role.Dtos;
 using Sample_CleanArchitecture_CQRS.Infrastructure.Models.Identity;
 
 namespace Sample_CleanArchitecture_CQRS.Infrastructure.Configuration.Mapper;

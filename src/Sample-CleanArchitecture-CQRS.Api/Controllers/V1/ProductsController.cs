@@ -7,12 +7,12 @@ using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Sample_CleanArchitecture_CQRS.Application.Common.Models.Results;
-using Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Commands.Create;
 using Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Commands.Delete;
-using Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Commands.Edit;
-using Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Common;
 using Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Queries.Details;
 using Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Queries.GetAll;
+using Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Products.Commands.Create;
+using Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Products.Commands.Edit;
+using Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Products.Common;
 
 
 namespace Sample_CleanArchitecture_CQRS.Api.Controllers.V1;

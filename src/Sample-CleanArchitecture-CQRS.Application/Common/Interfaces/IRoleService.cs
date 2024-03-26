@@ -1,5 +1,5 @@
 ﻿using Sample_CleanArchitecture_CQRS.Application.Common.Models.Results;
-using Sample_CleanArchitecture_CQRS.Application.CQRS.Role.Dtos;
+using Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Role.Dtos;
 
 namespace Sample_CleanArchitecture_CQRS.Application.Common.Interfaces;
 

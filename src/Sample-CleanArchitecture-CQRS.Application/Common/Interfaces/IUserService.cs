@@ -1,5 +1,5 @@
 ﻿using Sample_CleanArchitecture_CQRS.Application.Common.Models.Results;
-using Sample_CleanArchitecture_CQRS.Application.CQRS.Users.Dtos;
+using Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Users.Dtos;
 
 namespace Sample_CleanArchitecture_CQRS.Application.Common.Interfaces;
 

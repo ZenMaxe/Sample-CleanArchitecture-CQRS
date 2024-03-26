@@ -1,7 +1,6 @@
 ﻿using Mapster;
-
-using Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Commands.Edit;
-using Sample_CleanArchitecture_CQRS.Application.CQRS.Products.Common;
+using Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Products.Commands.Edit;
+using Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Products.Common;
 using Sample_CleanArchitecture_CQRS.Domain.Entities.Products;
 
 namespace Sample_CleanArchitecture_CQRS.Application.Configuration.Mapper;

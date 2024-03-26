@@ -2,7 +2,7 @@
 
 using Sample_CleanArchitecture_CQRS.Application.Common.Interfaces;
 using Sample_CleanArchitecture_CQRS.Application.Common.Models.Results;
-using Sample_CleanArchitecture_CQRS.Application.CQRS.Authentication.Dtos;
+using Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Authentication.Dtos;
 using Sample_CleanArchitecture_CQRS.Infrastructure.Models.Identity;
 using Sample_CleanArchitecture_CQRS.Infrastructure.Resources.Services.AuthenticationService;
 using Sample_CleanArchitecture_CQRS.Infrastructure.Resources.Services.UserService;
@@ -13,7 +13,7 @@ namespace Sample_CleanArchitecture_CQRS.Infrastructure.Services.Identity;
 
 
 
-public class AuthenticationService : IAuthenticationService
+public sealed class AuthenticationService : IAuthenticationService
 {
 
     private readonly SignInManager<ApplicationUser> _signInManager;
@@ -70,7 +70,7 @@ public class AuthenticationService : IAuthenticationService
         }
         else
         {
-            error = AuthenticationServiceErrors.AccountProblem;
+            error = AuthenticationServiceErrors.WrongUsernameOrPassword;
         }
 
         return error;

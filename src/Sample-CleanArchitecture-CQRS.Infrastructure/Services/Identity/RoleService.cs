@@ -9,14 +9,14 @@ using Microsoft.EntityFrameworkCore;
 
 using Sample_CleanArchitecture_CQRS.Application.Common.Interfaces;
 using Sample_CleanArchitecture_CQRS.Application.Common.Models.Results;
-using Sample_CleanArchitecture_CQRS.Application.CQRS.Role.Dtos;
+using Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Role.Dtos;
 using Sample_CleanArchitecture_CQRS.Infrastructure.Models.Identity;
 using Sample_CleanArchitecture_CQRS.Infrastructure.Resources.Services.RoleService;
 
 namespace Sample_CleanArchitecture_CQRS.Infrastructure.Services.Identity;
 
 
-public class RoleService : IRoleService
+public sealed class RoleService : IRoleService
 {
     private readonly RoleManager<ApplicationRole> _roleManager;
     private readonly IMapper _mapper;

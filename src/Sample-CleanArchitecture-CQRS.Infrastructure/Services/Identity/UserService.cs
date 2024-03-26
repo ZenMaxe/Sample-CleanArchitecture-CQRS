@@ -4,14 +4,14 @@ using Microsoft.AspNetCore.Identity;
 
 using Sample_CleanArchitecture_CQRS.Application.Common.Interfaces;
 using Sample_CleanArchitecture_CQRS.Application.Common.Models.Results;
-using Sample_CleanArchitecture_CQRS.Application.CQRS.Users.Dtos;
+using Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Users.Dtos;
 using Sample_CleanArchitecture_CQRS.Domain.Common.Interfaces;
 using Sample_CleanArchitecture_CQRS.Infrastructure.Models.Identity;
 using Sample_CleanArchitecture_CQRS.Infrastructure.Resources.Services.UserService;
 
 namespace Sample_CleanArchitecture_CQRS.Infrastructure.Services.Identity;
 
-public class UserService : IUserService
+public sealed class UserService : IUserService
 {
 
     private readonly UserManager<ApplicationUser> _userManager;
@@ -68,7 +68,7 @@ public class UserService : IUserService
         {
             user.SetPersonalName(firstName, lastName);
         }
-        
+
         if (!string.IsNullOrEmpty(phoneNumber))
         {
             user.PhoneNumber = phoneNumber;

@@ -10,7 +10,7 @@ using JwtRegisteredClaimNames = Microsoft.IdentityModel.JsonWebTokens.JwtRegiste
 
 namespace Sample_CleanArchitecture_CQRS.Infrastructure.Generators;
 
-internal class JwtTokenGenerator : IJwtTokenGenerator
+internal sealed class JwtTokenGenerator : IJwtTokenGenerator
 {
     private readonly IOptions<JwtConfig> _jwtSettings;
 

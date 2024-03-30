@@ -15,7 +15,8 @@ public interface IGenericRepository<TEntity> where TEntity : class
     void Delete(TEntity _object);
     void Detach(TEntity entity);
     Task<TEntity?> FirstOrDefaultAsync(Expression<Func<TEntity, bool>> predicate, CancellationToken cancellationToken = default);
-    IEnumerable<TEntity> Get(Expression<Func<TEntity, bool>> filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, string includeProperties = "");
+    IEnumerable<TEntity> Get(Expression<Func<TEntity, bool>>? filter = null,
+        Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null, string includeProperties = "");
     IEnumerable<TEntity> GetAll();
     Task<IEnumerable<TEntity>> GetAllAsync(CancellationToken cancellationToken = default);
     TEntity? GetById(Guid id);

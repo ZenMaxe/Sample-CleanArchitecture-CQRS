@@ -13,9 +13,7 @@ using Sample_CleanArchitecture_CQRS.Domain.Common.Interfaces;
 using Sample_CleanArchitecture_CQRS.Domain.Entities.Products;
 
 namespace Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Products.Commands.Delete;
-
-
-public sealed class DeleteProductCommandHandler : IRequestHandler<DeleteProductCommand, ApiResult<string>>
+internal sealed class DeleteProductCommandHandler : IRequestHandler<DeleteProductCommand, ApiResult<string>>
 {
     private readonly IUnitOfWork _unitOfWork;
     private readonly IProductRepository _productRepository;
@@ -51,4 +49,3 @@ public sealed class DeleteProductCommandHandler : IRequestHandler<DeleteProductC
         return ApiResult<string>.Success(ProductsResult.ProductHasBeenDeleted);
     }
 }
-

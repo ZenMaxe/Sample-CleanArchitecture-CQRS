@@ -16,7 +16,7 @@ using Sample_CleanArchitecture_CQRS.Domain.Common.Interfaces;
 using Sample_CleanArchitecture_CQRS.Domain.Entities.Products;
 
 namespace Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Products.Commands.Edit;
-public sealed class EditProductCommandHandler : IRequestHandler<EditProductCommand, ApiResult<ProductDetailsDto>>
+internal sealed class EditProductCommandHandler : IRequestHandler<EditProductCommand, ApiResult<ProductDetailsDto>>
 {
     private readonly IMapper _mapper;
     private readonly IProductRepository _productRepository;

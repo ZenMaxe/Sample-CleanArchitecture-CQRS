@@ -15,7 +15,7 @@ using Sample_CleanArchitecture_CQRS.Domain.Entities.Products;
 namespace Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Products.Queries.Details;
 
 
-public sealed class ProductDetailsQueryHandler : IRequestHandler<ProductDetailsQuery, ApiResult<ProductDetailsDto>>
+internal sealed class ProductDetailsQueryHandler : IRequestHandler<ProductDetailsQuery, ApiResult<ProductDetailsDto>>
 {
     private readonly IProductRepository _productRepository;
     private readonly IMapper _mapper;

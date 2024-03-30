@@ -14,15 +14,13 @@ using Sample_CleanArchitecture_CQRS.Application.Common.Models.Results;
 using Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Users.Dtos;
 
 namespace Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Users.Commands.Create;
-public sealed class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, ApiResult<UserDto>>
+internal sealed class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, ApiResult<UserDto>>
 {
     private readonly IUserService _userService;
-    private readonly IMapper _mapper;
 
-    public CreateUserCommandHandler(IMapper mapper,
+    public CreateUserCommandHandler(
         IUserService userService)
     {
-        _mapper = mapper;
         _userService = userService;
     }
 
@@ -38,7 +36,7 @@ public sealed class CreateUserCommandHandler : IRequestHandler<CreateUserCommand
         }
 
 
-        return ApiResult<UserDto>.Success(user.Result);
+        return ApiResult<UserDto>.Success(user.Result!);
     }
 }
 

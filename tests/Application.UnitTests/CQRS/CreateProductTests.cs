@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 using Application.UnitTests.Fixtures;
 
 using MapsterMapper;
@@ -11,6 +6,8 @@ using MapsterMapper;
 using Moq;
 
 using Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Products.Commands.Create;
+using Sample_CleanArchitecture_CQRS.Domain.Common.Interfaces;
+using Sample_CleanArchitecture_CQRS.Domain.Entities.Products;
 using Sample_CleanArchitecture_CQRS.Infrastructure.Data;
 using Sample_CleanArchitecture_CQRS.Infrastructure.Repositories;
 
@@ -45,9 +42,9 @@ public class CreateProductTests : IClassFixture<DbFixture>
         // Act
         var result = await handler.Handle(command, cancellationToken);
 
+        // Assert
         Assert.NotNull(result);
         Assert.True(result.IsSuccess);
     }
 
 }
-

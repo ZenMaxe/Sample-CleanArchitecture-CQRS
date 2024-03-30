@@ -15,6 +15,14 @@
       <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
     </ItemGroup>
 
+
+    <!--Allow Test Project to See Internal Methods-->
+    <ItemGroup>
+        <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+            <_Parameter1>Application.UnitTests</_Parameter1>
+        </AssemblyAttribute>
+    </ItemGroup>
+
     <ItemGroup>
       <Folder Include="CQRS\v1\Users\Queries\" />
     </ItemGroup>

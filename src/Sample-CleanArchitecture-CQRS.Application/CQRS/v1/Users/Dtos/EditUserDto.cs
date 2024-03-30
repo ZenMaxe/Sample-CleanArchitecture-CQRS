@@ -20,7 +20,6 @@ public record EditUserDto
     public string? NewPassword { get; }
 
     [DataType(DataType.Password)]
-    [Compare(nameof(NewPassword))] // Todo: Need Assign Resx File To Multi Language Error
     public string? ConfirmationPassword { get; }
 
     public string? PhoneNumber { get; }

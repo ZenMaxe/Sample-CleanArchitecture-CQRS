@@ -12,7 +12,7 @@ public class UnitOfWork : IUnitOfWork, IDisposable
 {
 
     private readonly AppDbContext dbContext;
-    private bool disposed = false;
+    private bool _disposed = false;
     private IDbContextTransaction? _transaction;
 
 
@@ -22,7 +22,7 @@ public class UnitOfWork : IUnitOfWork, IDisposable
     {
         dbContext = db;
     }
-   
+
     public int SaveChanges(bool acceptAllChangesOnSuccess)
     {
         return dbContext.SaveChanges(acceptAllChangesOnSuccess);
@@ -49,20 +49,26 @@ public class UnitOfWork : IUnitOfWork, IDisposable
     }
     protected virtual void Dispose(bool disposing)
     {
-        if (!this.disposed)
+        if (!this._disposed)
         {
             if (disposing)
             {
                 dbContext.Dispose();
+                _transaction?.Dispose();
             }
+            this._disposed = true;
         }
-        this.disposed = true;
+
     }
     public void Dispose()
     {
         Dispose(true);
-        _transaction?.Dispose();
         GC.SuppressFinalize(this);
+    }
+
+    ~UnitOfWork()
+    {
+        Dispose(false);
     }
 
     public async Task BeginTransaction()

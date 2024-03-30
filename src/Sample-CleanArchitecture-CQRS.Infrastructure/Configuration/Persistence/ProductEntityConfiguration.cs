@@ -12,7 +12,7 @@ using Sample_CleanArchitecture_CQRS.Domain.Entities.Products;
 namespace Sample_CleanArchitecture_CQRS.Infrastructure.Configuration.Persistence;
 
 
-public class ProductEntityConfiguration : IEntityTypeConfiguration<Product>
+internal class ProductEntityConfiguration : IEntityTypeConfiguration<Product>
 {
     public void Configure(EntityTypeBuilder<Product> builder)
     {
@@ -28,6 +28,6 @@ public class ProductEntityConfiguration : IEntityTypeConfiguration<Product>
             .HasMaxLength(255);
     }
 
-    
+
 }
 

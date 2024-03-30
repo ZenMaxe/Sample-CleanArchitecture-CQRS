@@ -18,8 +18,6 @@ internal static class DependencyInjection
         Assembly assembly = Assembly.GetExecutingAssembly();
         config.Scan(assembly);
 
-        // config.ScanInheritedTypes(assembly);
-
         return services;
     }
 }

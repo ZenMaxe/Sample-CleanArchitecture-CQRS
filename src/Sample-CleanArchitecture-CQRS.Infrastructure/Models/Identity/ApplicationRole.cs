@@ -5,7 +5,7 @@ namespace Sample_CleanArchitecture_CQRS.Infrastructure.Models.Identity;
 public class ApplicationRole : IdentityRole<Guid>
 {
 
-    public string DisplayName { get; set; }
+    public string DisplayName { get; set; } = null!;
 
 
     /// <summary>

@@ -28,9 +28,9 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore /p:ContinuousIntegrationBuild=true
+      run: dotnet build --configuration Release --no-restore /p:ContinuousIntegrationBuild=true
     - name: Test
-      run: dotnet test --no-build --verbosity normal /p:CollectCoverage=true /p:CoverletOutputFormat=opencover --logger trx --collect:"XPlat Code Coverage"
+      run: dotnet test --configuration Release --no-build --verbosity normal  --logger trx --collect:"XPlat Code Coverage"
 
     - name: Combine Coverage Reports
       uses: danielpalme/ReportGenerator-GitHub-Action@5.2.4

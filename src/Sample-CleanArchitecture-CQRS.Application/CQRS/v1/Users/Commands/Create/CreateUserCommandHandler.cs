@@ -9,12 +9,14 @@ using MapsterMapper;
 using MediatR;
 
 using Microsoft.AspNetCore.Identity;
+using Sample_CleanArchitecture_CQRS.Application.Common.Abstractions.Messaging.Commands;
 using Sample_CleanArchitecture_CQRS.Application.Common.Interfaces;
 using Sample_CleanArchitecture_CQRS.Application.Common.Models.Results;
 using Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Users.Dtos;
 
 namespace Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Users.Commands.Create;
-internal sealed class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, ApiResult<UserDto>>
+internal sealed class CreateUserCommandHandler :
+    ICommandHandler<CreateUserCommand, UserDto>
 {
     private readonly IUserService _userService;
 

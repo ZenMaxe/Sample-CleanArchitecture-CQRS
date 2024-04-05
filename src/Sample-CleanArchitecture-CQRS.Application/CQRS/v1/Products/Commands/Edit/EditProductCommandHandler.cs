@@ -9,6 +9,7 @@ using Mapster;
 using MapsterMapper;
 
 using MediatR;
+using Sample_CleanArchitecture_CQRS.Application.Common.Abstractions.Messaging.Commands;
 using Sample_CleanArchitecture_CQRS.Application.Common.Models.Results;
 using Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Products.Common;
 using Sample_CleanArchitecture_CQRS.Application.Resources.Products;
@@ -16,7 +17,8 @@ using Sample_CleanArchitecture_CQRS.Domain.Common.Interfaces;
 using Sample_CleanArchitecture_CQRS.Domain.Entities.Products;
 
 namespace Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Products.Commands.Edit;
-internal sealed class EditProductCommandHandler : IRequestHandler<EditProductCommand, ApiResult<ProductDetailsDto>>
+internal sealed class EditProductCommandHandler :
+    ICommandHandler<EditProductCommand, ProductDetailsDto>
 {
     private readonly IMapper _mapper;
     private readonly IProductRepository _productRepository;

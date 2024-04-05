@@ -9,6 +9,7 @@ using Mapster;
 using MapsterMapper;
 
 using MediatR;
+using Sample_CleanArchitecture_CQRS.Application.Common.Abstractions.Messaging.Commands;
 using Sample_CleanArchitecture_CQRS.Application.Common.Models.Results;
 using Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Products.Common;
 using Sample_CleanArchitecture_CQRS.Application.Resources.Products;
@@ -19,7 +20,7 @@ namespace Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Products.Commands.Cr
 
 internal sealed class CreateProductCommandHandler(IProductRepository productRepository,
     IMapper mapper,
-    IUnitOfWork unitOfWork) : IRequestHandler<CreateProductCommand, ApiResult<ProductDetailsDto>>
+    IUnitOfWork unitOfWork) : ICommandHandler<CreateProductCommand, ProductDetailsDto>
 {
 
     private readonly IProductRepository _productRepository = productRepository;
@@ -30,7 +31,7 @@ internal sealed class CreateProductCommandHandler(IProductRepository productRepo
     {
         Product product = Product.CreateNew(request.Name, request.Price);
 
-        await _productRepository.AddAsync(product, cancellationToken);
+        await _productRepository.Add(product);
 
         int result = await _unitOfWork.SaveChangesAsync(cancellationToken);
 

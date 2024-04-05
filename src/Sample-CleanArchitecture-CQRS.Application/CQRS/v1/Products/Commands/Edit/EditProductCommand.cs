@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Mapster;
 
 using MediatR;
+using Sample_CleanArchitecture_CQRS.Application.Common.Abstractions.Messaging.Commands;
 using Sample_CleanArchitecture_CQRS.Application.Common.Models.Results;
 using Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Products.Common;
 
@@ -16,7 +17,7 @@ namespace Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Products.Commands.Ed
 public sealed record EditProductCommand(
     Guid ProductId,
     string? Name,
-    decimal? Price) : IRequest<ApiResult<ProductDetailsDto>>, IMapFrom<EditProductDto>;
+    decimal? Price) : ICommand<ProductDetailsDto>, IMapFrom<EditProductDto>;
 
 public sealed record EditProductDto(
     string? Name,

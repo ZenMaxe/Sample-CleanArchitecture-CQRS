@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using MapsterMapper;
 
 using MediatR;
+using Sample_CleanArchitecture_CQRS.Application.Common.Abstractions.Messaging.Queries;
 using Sample_CleanArchitecture_CQRS.Application.Common.Models.Results;
 using Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Products.Common;
 using Sample_CleanArchitecture_CQRS.Application.Resources.Products;
@@ -15,7 +16,7 @@ using Sample_CleanArchitecture_CQRS.Domain.Entities.Products;
 namespace Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Products.Queries.Details;
 
 
-internal sealed class ProductDetailsQueryHandler : IRequestHandler<ProductDetailsQuery, ApiResult<ProductDetailsDto>>
+internal sealed class ProductDetailsQueryHandler : IQueryHandler<ProductDetailsQuery, ProductDetailsDto>
 {
     private readonly IProductRepository _productRepository;
     private readonly IMapper _mapper;

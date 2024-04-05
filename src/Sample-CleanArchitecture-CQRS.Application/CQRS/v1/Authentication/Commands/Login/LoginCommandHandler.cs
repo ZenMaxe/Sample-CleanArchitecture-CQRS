@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using MediatR;
+using Sample_CleanArchitecture_CQRS.Application.Common.Abstractions.Messaging.Commands;
 using Sample_CleanArchitecture_CQRS.Application.Common.Interfaces;
 using Sample_CleanArchitecture_CQRS.Application.Common.Models.Results;
 using Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Authentication.Dtos;
@@ -12,7 +13,7 @@ using Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Authentication.Dtos;
 namespace Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Authentication.Commands.Login;
 
 
-public sealed class LoginCommandHandler : IRequestHandler<LoginCommand, ApiResult<TokenDto>>
+public sealed class LoginCommandHandler : ICommandHandler<LoginCommand, TokenDto>
 {
     private readonly IAuthenticationService _authenticationService;
 

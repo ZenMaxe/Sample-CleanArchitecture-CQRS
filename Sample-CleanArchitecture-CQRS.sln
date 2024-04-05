@@ -24,9 +24,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{FE9C2B4F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.UnitTests", "tests\Application.UnitTests\Application.UnitTests.csproj", "{F097013B-6708-497D-8DD3-B03D200D9A29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.UnitTests", "tests\Domain.UnitTests\Domain.UnitTests.csproj", "{D6336F4D-55CC-41D3-AC40-D0BD30C796CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.UnitTests", "tests\Domain.UnitTests\Domain.UnitTests.csproj", "{D6336F4D-55CC-41D3-AC40-D0BD30C796CD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample-CleanArchitecture-CQRS.Api", "src\Sample-CleanArchitecture-CQRS.Api\Sample-CleanArchitecture-CQRS.Api.csproj", "{FD3773A4-0CFD-4AEE-83EF-162803AD800A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Architecture.UnitTests", "tests\ArchitectureTests\Architecture.UnitTests.csproj", "{BA7C50BA-622C-4E44-954E-C38FDF14FD8E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,6 +64,10 @@ Global
 		{FD3773A4-0CFD-4AEE-83EF-162803AD800A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD3773A4-0CFD-4AEE-83EF-162803AD800A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD3773A4-0CFD-4AEE-83EF-162803AD800A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA7C50BA-622C-4E44-954E-C38FDF14FD8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA7C50BA-622C-4E44-954E-C38FDF14FD8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA7C50BA-622C-4E44-954E-C38FDF14FD8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA7C50BA-622C-4E44-954E-C38FDF14FD8E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +80,7 @@ Global
 		{F097013B-6708-497D-8DD3-B03D200D9A29} = {FE9C2B4F-CC32-4FD2-B2E6-7B84C4E13538}
 		{D6336F4D-55CC-41D3-AC40-D0BD30C796CD} = {FE9C2B4F-CC32-4FD2-B2E6-7B84C4E13538}
 		{FD3773A4-0CFD-4AEE-83EF-162803AD800A} = {F6768283-AA3D-4EF1-B19C-AC7E90281492}
+		{BA7C50BA-622C-4E44-954E-C38FDF14FD8E} = {FE9C2B4F-CC32-4FD2-B2E6-7B84C4E13538}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B6EBEA5B-46DF-4977-9198-F102C406F51A}

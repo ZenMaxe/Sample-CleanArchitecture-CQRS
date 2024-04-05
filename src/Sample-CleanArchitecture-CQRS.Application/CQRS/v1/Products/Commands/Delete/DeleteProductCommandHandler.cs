@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using MediatR;
+using Sample_CleanArchitecture_CQRS.Application.Common.Abstractions.Messaging.Commands;
 using Sample_CleanArchitecture_CQRS.Application.Common.Models.Results;
 using Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Products.Common;
 using Sample_CleanArchitecture_CQRS.Application.Resources.Products;
@@ -13,7 +14,8 @@ using Sample_CleanArchitecture_CQRS.Domain.Common.Interfaces;
 using Sample_CleanArchitecture_CQRS.Domain.Entities.Products;
 
 namespace Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Products.Commands.Delete;
-internal sealed class DeleteProductCommandHandler : IRequestHandler<DeleteProductCommand, ApiResult<string>>
+internal sealed class DeleteProductCommandHandler :
+    ICommandHandler<DeleteProductCommand, string>
 {
     private readonly IUnitOfWork _unitOfWork;
     private readonly IProductRepository _productRepository;

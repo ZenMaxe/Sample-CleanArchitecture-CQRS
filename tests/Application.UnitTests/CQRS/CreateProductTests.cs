@@ -6,8 +6,6 @@ using MapsterMapper;
 using Moq;
 
 using Sample_CleanArchitecture_CQRS.Application.CQRS.v1.Products.Commands.Create;
-using Sample_CleanArchitecture_CQRS.Domain.Common.Interfaces;
-using Sample_CleanArchitecture_CQRS.Domain.Entities.Products;
 using Sample_CleanArchitecture_CQRS.Infrastructure.Data;
 using Sample_CleanArchitecture_CQRS.Infrastructure.Repositories;
 
@@ -26,7 +24,7 @@ public class CreateProductTests : IClassFixture<DbFixture>
     public async Task Handle_ValidCommand_ReturnsSuccessResult()
     {
         // Arrange
-        using var dbContext = _fixture.DbContext;
+        await using var dbContext = _fixture.DbContext;
         var unitOfWork = new UnitOfWork(dbContext);
         var productRepository = new ProductRepository(dbContext);
 

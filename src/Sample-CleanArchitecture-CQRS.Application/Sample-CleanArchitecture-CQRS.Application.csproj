@@ -18,9 +18,8 @@
 
     <!--Allow Test Project to See Internal Methods-->
     <ItemGroup>
-        <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
-            <_Parameter1>Application.UnitTests</_Parameter1>
-        </AssemblyAttribute>
+	    <InternalsVisibleTo Include="Architecture.UnitTests" />
+	    <InternalsVisibleTo Include="Application.UnitTests" />
     </ItemGroup>
 
     <ItemGroup>
